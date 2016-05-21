@@ -26,8 +26,8 @@ A bit more in-depth definition for the CSS/Less guidelines.
 
 // good
 .avatar {
-  border-radius: 50%;
   border: 2px solid white;
+  border-radius: 50%;
 }
 
 .one,
@@ -92,9 +92,9 @@ Quite self-explanatory. Every color has to be defined in the theme variables. Al
 ```css
 LESS
 
-    @color-white:               #fff;
-    @color-black:               #000;
-    @brand-success:         #41a500;
+    @color-white:   #fff;
+    @color-black:   #000;
+    @brand-success: #41a500;
 
 CSS
 
@@ -124,3 +124,7 @@ Mixins without a parameter are most of the time not needed because they just pro
     text-transform: @text-transformation;
 }
 ```
+
+### Don't use @extend
+
+Never. Just don't. If you want to read more about it, you can find some information in this nice article from [CSS Wizardry](http://csswizardry.com/2016/02/mixins-better-for-performance/). It handles Sass, but the result is the same.

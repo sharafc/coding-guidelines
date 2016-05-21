@@ -3,7 +3,6 @@
 A bit more in-depth definition for the JavaScript guidelines.
 
 
-
 ## Types / Blocks / Comments
 
 ### Use the literal syntax for object and array creation.
@@ -31,7 +30,7 @@ var name =  'Bob Parr' ;
 var fullName =  'Bob '  + this.lastName;
 ```
 
-### Use braces with all multi-line blocks.
+### Use braces for all multi-line blocks.
 
 ```javascript
 // bad
@@ -48,8 +47,10 @@ function() {
 }
 ```
 
-### Use /** ... */ for multi-line comments.
-Include a description, specify types and values for all parameters and return values.
+## Commenting
+
+### Use /** ... */ for multi-line comments and JsDoc.
+Include a description, specify types and values for all parameters and return values. This is necessary if you use something like [JsDoc](http://usejsdoc.org/). Even if not it helps to understand the code and many IDEs will interpret the documentation.
 
 ```javascript
 // bad

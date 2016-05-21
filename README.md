@@ -34,7 +34,7 @@ The general standard is [CSS](http://www.w3.org/TR/CSS2/syndata.html) from W3C.
 
 **Notation**
 
- * The first letter of a class name is always lowercase, logical parts are spereated by a dash, e.g. border-blue
+ * The first letter of a class name is always lowercase, logical parts are separated by a dash, e.g. border-blue
  * Attributes have to be written in alphabetical order, starting with mixins
  * Color-codes have to be written hexadecimal and letters everything in lowercase (short form is appreciated)
  * Browser hacks are only allowed if really necessary  (e.g.. box model bug in IE6) most should be handled by a normalize style
