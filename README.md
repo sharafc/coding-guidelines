@@ -47,7 +47,7 @@ For a more in-depth definition please see the [CSS guidelines](css/).
 
 ### JavaScript
 
-The general coding standards are derived from [Mozillas](https://developer.mozilla.org/en-US/docs/Web/JavaScript) coding standards for JavaScript with more specific ruling provided by [Douglas Crockford](http://javascript.crockford.com/code.html).
+The general coding standards are derived from [Mozillas](https://developer.mozilla.org/en-US/docs/Web/JavaScript) coding standards for JavaScript with more specific ruling provided by [Douglas Crockford](http://javascript.crockford.com/code.html). Also the Coding Guidelines from [AirBnb](https://github.com/airbnb/javascript) are pretty awesome.
 
 **Notation**
 

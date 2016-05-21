@@ -9,25 +9,25 @@ A bit more in-depth definition for the JavaScript guidelines.
 
 ```javascript
 // bad
-var item = new Object(); 
-var items = new Array();     
+var object = new Object(); 
+var array = new Array();     
 
 // good
-var item = {}; 
-var items = [];
+var object = {}; 
+var array = [];
 ```
 
-### Use single quotes '' for strings.
+### Use single quotes ' for strings.
 
 ```javascript
 // bad
-var name =  "Bob Parr" ;
-var fullName =  "Bob "  + this.lastName;
+var name =  "Max Mustermann" ;
+var fullName =  "MAx " + lastName;
 
 
 // good
-var name =  'Bob Parr' ;
-var fullName =  'Bob '  + this.lastName;
+var name =  'Max Mustermann' ;
+var fullName =  'Max '  + lastName;
 ```
 
 ### Use braces for all multi-line blocks.
@@ -50,25 +50,27 @@ function() {
 ## Commenting
 
 ### Use /** ... */ for multi-line comments and JsDoc.
-Include a description, specify types and values for all parameters and return values. This is necessary if you use something like [JsDoc](http://usejsdoc.org/). Even if not it helps to understand the code and many IDEs will interpret the documentation.
+Include a description, specify types and values for all parameters and return values. This is necessary if you use something like [JsDoc](http://usejsdoc.org/). Even if you are not using it, t it helps to understand the code and many IDEs will interpret the documentation.
 
 ```javascript
 // bad
-// returns a new element
-// based on the passed in tag name
-function make(tag) {
-  return element;
+// returns a value
+// based on the passed in value
+function myFunction(e) {
+    // do something
+    return value;
 }
 
 // good
 /**
- * returns a new element based on the passed in tag name
+ * returns a value based on the passed in number
  *
- * @param {String} tag
- * @return {Element} element
+ * @param {Integer} number
+ * @return {Integer} value
  */
-function make(tag) {
-  return element;
+function myFunction(number) {
+    //do something
+    return value;
 }
 ```
 
@@ -90,14 +92,14 @@ This is in contradiction to Douglas' recommendation, but the best practises chan
 ## Variables / Naming
 
 ### Always use var to declare variables.
-Not doing so will result in global variables. We want to avoid polluting the global namespace.
+Not doing so will result in global variable and this is something we clearly dont want.
 
 ```javascript
 // bad
-superPower = new SuperPower();        
+variable = "Global variable"
 
 // good
-var superPower = new SuperPower();
+var variable = 'Variable in context';
 ```
 
 ### Assign variables at the top of their scope.
@@ -106,26 +108,25 @@ This helps avoid issues with variable declaration and assignment hoisting relate
 ```javascript
 // bad
 function() {
-  // doing stuff
-  var name = getName();
+    // doing stuff
+    var value = getValue();
 
-  if (name ===  'test' ) {
-    return false;
-  }
+    if (value ===  'undefined' ) {
+        return false;
+    }
 
-  return name;
+    return value;
 }
 
 // good
 function() {
-  var name = getName();
-  // doing stuff
+    var value = getValue();
+    // doing stuff
+    if (value ===  'undefined' ) {
+        return false;
+    }
 
-  if (name ===  'test' ) {
-    return false;
-  }
-
-  return name;
+    return value;
 }
 ```
 
@@ -225,19 +226,19 @@ Conditional statements such as the if statement evaluate their expression using 
 ### Use shortcuts when possible.
 ```javascript
 // bad
-if (name !==  ' ' ) {
-  // ...stuff...
+if (value !==  ' ' ) {
+    // ...stuff...
 }
-if (collection.length > 0) {
-  // ...stuff...
+if (array.length > 0) {
+    // ...stuff...
 }
 
 
 // good
-if (name) {
-  // ...stuff...
+if (value) {
+    // ...stuff...
 } 
-if (collection.length) {
-  // ...stuff...
+if (array.length) {
+    // ...stuff...
 }
 ```

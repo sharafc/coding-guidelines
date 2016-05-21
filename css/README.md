@@ -39,12 +39,14 @@ A bit more in-depth definition for the CSS/Less guidelines.
 
 ## Comments
 
- * Prefer line comments (// in less) to block comments. Do not use asterisk comments (/* ... */) because they cause errors in less4J
+ * Prefer line comments (// in less) to block comments. Do not use asterisk comments (/* ... */) because they cause errors in [Less4J](https://github.com/SomMeri/less4j/).
  * Prefer comments on their own line. Avoid end-of-line comments.
  * Write detailed comments for code that isn't self-documenting:
     - Uses of z-index
     - Compatibility or browser-specific hacks
     - Overwriting of framework styles
+ * Avoid specificity hell as much as possible.
+
 
 ## Write styles mobile-first
 
@@ -76,7 +78,7 @@ Since websites should be in a responsive layout, our mobile styling should alway
 
 ## ID as selectors for HTML elements
 
-Cascade and Specificity are a major point at style development. A strict and transparent development reduces maintenance time. IDs should only be carefully used to avoid the feared ID soup.
+Cascade and Specificity are a major point at style development. A strict and transparent development reduces maintenance time. IDs should only be carefully used to avoid the feared ID soup. This can also prevent [specificity hell](https://www.smashingmagazine.com/2010/04/css-specificity-and-inheritance/). If in doubt you can also [calculate the specificity](https://specificity.keegan.st/)
 
  * IDs must be explicit.
  * IDs raise the specificity of a class.
