@@ -2,7 +2,6 @@
 
 A bit more in-depth definition for the JavaScript guidelines.
 
-
 ## Types / Blocks / Comments
 
 ### Use the literal syntax for object and array creation.
@@ -22,7 +21,7 @@ var array = [];
 ```javascript
 // bad
 var name =  "Max Mustermann" ;
-var fullName =  "MAx " + lastName;
+var fullName =  "Max " + lastName;
 
 
 // good
@@ -89,7 +88,7 @@ var active = true;
 This is in contradiction to Douglas' recommendation, but the best practises changed here. Also Sonar will raise an error if you make same line comments.
 
  
-## Variables / Naming
+## Variables / (File)Naming
 
 ### Always use var to declare variables.
 Not doing so will result in global variable and this is something we clearly dont want.

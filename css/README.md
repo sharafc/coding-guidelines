@@ -2,6 +2,11 @@
 
 A bit more in-depth definition for the CSS/Less guidelines.
 
+## File naming
+Typically you should create CSS modules and a namespace for your library. The file naming should follow this structure. As divider we us the underscore `_`:
+```
+<namespace>_<modulename>_<submodulename>.less/.css
+```
 
 ## Formatting / Blocks / Comments
 
