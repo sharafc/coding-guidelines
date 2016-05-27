@@ -20,12 +20,12 @@ var array = [];
 
 ```javascript
 // bad
-var name =  "Max Mustermann" ;
+var name =  "Max Mustermann";
 var fullName =  "Max " + lastName;
 
 
 // good
-var name =  'Max Mustermann' ;
+var name =  'Max Mustermann';
 var fullName =  'Max '  + lastName;
 ```
 
@@ -41,7 +41,7 @@ function() { return false; }
 if (test) {
   return false;
 }
-function() {
+function myFunction () {
   return false;
 }
 ```
@@ -49,7 +49,9 @@ function() {
 ## Commenting
 
 ### Use /** ... */ for multi-line comments and JsDoc.
-Include a description, specify types and values for all parameters and return values. This is necessary if you use something like [JsDoc](http://usejsdoc.org/). Even if you are not using it, t it helps to understand the code and many IDEs will interpret the documentation.
+Include a description, specify types and values for all parameters and return values. This is necessary if you use
+something like [JsDoc](http://usejsdoc.org/). Even if you are not using it, t it helps to understand the code and many
+IDEs will interpret the documentation.
 
 ```javascript
 // bad
@@ -85,7 +87,8 @@ var active = true;  // is current tab
 var active = true;
 ```
 
-This is in contradiction to Douglas' recommendation, but the best practises changed here. Also Sonar will raise an error if you make same line comments.
+This is in contradiction to Douglas' recommendation, but the best practises changed here. Also Sonar will raise an error
+if you make same line comments.
 
  
 ## Variables / (File)Naming
@@ -213,7 +216,8 @@ var $myObject = $('myDOMElem');
 
 Use === and !== over == and !=.
 
-Conditional statements such as the if statement evaluate their expression using coercion with the ToBoolean abstract method and always follow these simple rules:
+Conditional statements such as the if statement evaluate their expression using coercion with the ToBoolean abstract
+method and always follow these simple rules:
 
  * Objects evaluate to true
  * Undefined evaluates to false
