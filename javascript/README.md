@@ -1,5 +1,8 @@
 # JavaScript Guidelines
 
+
+:boom::fire: This part is outdated and needs a big overhaul. :fire::boom:
+
 A bit more in-depth definition for the JavaScript guidelines.
 
 ## Types / Blocks / Comments
@@ -8,11 +11,11 @@ A bit more in-depth definition for the JavaScript guidelines.
 
 ```javascript
 // bad
-var object = new Object(); 
-var array = new Array();     
+var object = new Object();
+var array = new Array();
 
 // good
-var object = {}; 
+var object = {};
 var array = [];
 ```
 
@@ -34,7 +37,7 @@ var fullName =  'Max '  + lastName;
 ```javascript
 // bad
 if (test)
-  return false; 
+  return false;
 function() { return false; }
 
 // good
@@ -76,7 +79,7 @@ function myFunction(number) {
 ```
 
 ### Use // for single line comments.
-Place single line comments on a newline above the subject of the comment. Put an empty line before the comment. 
+Place single line comments on a newline above the subject of the comment. Put an empty line before the comment.
 
 ```javascript
 // bad
@@ -90,7 +93,7 @@ var active = true;
 This is in contradiction to Douglas' recommendation, but the best practises changed here. Also Sonar will raise an error
 if you make same line comments.
 
- 
+
 ## Variables / (File)Naming
 
 ### Always use var to declare variables.
@@ -170,12 +173,12 @@ function thisIsMyFunction() {}
 ```javascript
 // bad
 var bad = new user({
-  name:  'nope' 
+  name:  'nope'
 });
 
 // good
 var good = new User({
-  name:  'yup' 
+  name:  'yup'
 });
 ```
 
@@ -185,7 +188,7 @@ var good = new User({
 // bad
 // file name moduleUser.js
 var moduleUser = function () {
-    var method1 = function() {   
+    var method1 = function() {
         // ...stuff...
     }
     // ...stuff...
@@ -196,7 +199,7 @@ var moduleUser = function () {
 // file name modules.user.js
 modules = modules || {};
 modules.User = function () {
-   var method1 = function() { 
+   var method1 = function() {
     // ...stuff...
    }
    // ...stuff...
@@ -205,7 +208,7 @@ modules.User = function () {
 
 ### Use $ notation for jQuery objects
 ```javascript
-//bad 
+//bad
 var myObject = $('myDOMElem');
 
 //good
@@ -240,7 +243,7 @@ if (array.length > 0) {
 // good
 if (value) {
     // ...stuff...
-} 
+}
 if (array.length) {
     // ...stuff...
 }

@@ -1,9 +1,13 @@
 # Coding Guidelines
 
-Best practices and guidelines for writing HTML, CSS , JavaScript and Java.
+Best practices and guidelines for writing HTML, CSS , JavaScript and other languages.
+
+> Every line of code should appear to be written by a single person, no matter the number of contributors.
+*Twitter*
 
 ## Table of Contents
 
+ - [HTML](html/)
  - [CSS](css/)
  - [JavaScript](javascript/)
 
@@ -19,43 +23,12 @@ configuration of IDE settings accordingly.
 | Encoding     | UTF-8          |
 | Line Endings | UNIX           |
 
-* Tabs are not to be used at all
-* Code is documentation. Comments are useful but should be removed by the delivering system (e.g. minify/uglify)
+* Tabs are not to be used at all, use soft tabs with 4 spaces
+* Code is documentation. Comments are useful, but should be removed by the delivering system (e.g. minify/uglify)
 * Prevent inline styles where possible. The only reasonable way is when changing styling by JavaScript
 * Deprecated markup/functionality should never be used
-
-### HTML
-
-The general standard is [HTML5](http://www.w3.org/TR/html5/) from W3C. A short comparison of the rules expanding the
-W3C rule set follows below.
-
-**Notation**
-
- * No layout tables. Tables only for their appropriate usage
- * Positioning of page elements only by CSS. No usage of blank gifs or the like
- * Write stringent code. For same page elements use the same containers and tags
- * Tags and attributes have to be written in lowercase
- * Always quote with double quotes (e.g. `<a href=””` )
- * standard attributes will never be explicitly written
- * all necessary attributes have to be filled with usable content (e.g. alt/title)
-
-### CSS
-
-The general standard is [CSS](http://www.w3.org/TR/CSS2/syndata.html) from W3C.
-
-**Notation**
-
- * The first letter of a class name is always lowercase, logical parts are separated by a dash, e.g. border-blue
- * Attributes have to be written in alphabetical order, starting with mixins
- * Color-codes have to be written hexadecimal and letters everything in lowercase (short form is appreciated)
- * Browser hacks are only allowed if really necessary  (e.g.. box model bug in IE6) most should be handled by a
-normalize style
- * CSS never replaces semantic (e.g. `<span class=”strong”>` never replaces `<strong>`)
- * Don’t use asterisk comments, they cause errors in less4J
- * Use IDs very carefully
-
-For a more in-depth definition please see the [CSS guidelines](css/).
-
+* Add new line at end of files
+* Trim trailing white space
 
 ### JavaScript
 
@@ -77,10 +50,9 @@ coding standards for JavaScript with more specific ruling provided by
 
 For a more in-depth definition please see the [JavaScript guidelines](javascript/).
 
-### Java
+#### JSDoc
 
-#### JavaDoc
-JavaDoc
 
-Every method needs to get a JavaDoc comment. The comment should describe the meaning and the responsibility of the class
+Every method needs to get a JSDoc comment. The comment should describe the meaning and the responsibility of the class
 or the method. It is important that responses to null values or similar values that may be out of range are described.
+Also parameters must be documented and explained.
