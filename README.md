@@ -16,7 +16,7 @@ Best practices and guidelines for writing HTML, CSS , JavaScript and other langu
 The following settings are required for source code created within the project(s). The recommendation is to set the
 configuration of IDE settings accordingly.
 
-|              |                |
+|    Type      |     Setting    |
 |--------------|----------------|
 | Line Width   | 120 characters |
 | Indention    | 4 spaces       |
@@ -46,12 +46,11 @@ coding standards for JavaScript with more specific ruling provided by
  * Spaces around braces used for in-line functions or objects, except before commas or semicolons etc. pp.
  * Constants should be in UPPER_CASE
  * Don't use reserved keywords as identifiers, see
-[ES6](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Lexical_grammar#Reserved_keywords_as_of_ECMAScript_6)
+[ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords)
 
 For a more in-depth definition please see the [JavaScript guidelines](javascript/).
 
 #### JSDoc
-
 
 Every method needs to get a JSDoc comment. The comment should describe the meaning and the responsibility of the class
 or the method. It is important that responses to null values or similar values that may be out of range are described.

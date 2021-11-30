@@ -11,28 +11,29 @@ A bit more in-depth definition for the JavaScript guidelines.
 
 ```javascript
 // bad
-var object = new Object();
-var array = new Array();
+let object = new Object();
+let array = new Array();
 
-// good
-var object = {};
-var array = [];
+// better
+let object = {};
+let array = [];
 ```
 
-### Use single quotes ' for strings.
+While there is no performance difference, the literal syntax is more concise. Also the `Array` constructor has the single-argument pitfall, therefore it should be avoided.
+
+### Use single quotes `''` for strings.
 
 ```javascript
 // bad
-var name =  "Max Mustermann";
-var fullName =  "Max " + lastName;
+let name =  "Max Mustermann";
+let fullName =  "Max " + lastName;
 
-
-// good
-var name =  'Max Mustermann';
-var fullName =  'Max '  + lastName;
+// better
+let name =  'Max Mustermann';
+let fullName =  'Max '  + lastName;
 ```
 
-### Use braces for all multi-line blocks.
+### Use braces `{}` for all multi-line blocks.
 
 ```javascript
 // bad
@@ -40,7 +41,7 @@ if (test)
   return false;
 function() { return false; }
 
-// good
+// better
 if (test) {
   return false;
 }
@@ -51,7 +52,7 @@ function myFunction () {
 
 ## Commenting
 
-### Use /** ... */ for multi-line comments and JsDoc.
+### Use `/** ... */` for multi-line comments and JsDoc.
 Include a description, specify types and values for all parameters and return values. This is necessary if you use
 something like [JsDoc](http://usejsdoc.org/). Even if you are not using it, t it helps to understand the code and many
 IDEs will interpret the documentation.
@@ -65,12 +66,12 @@ function myFunction(e) {
     return value;
 }
 
-// good
+// better
 /**
  * returns a value based on the passed in number
  *
- * @param {Integer} number
- * @return {Integer} value
+ * @param {Integer} number The number you want to modify
+ * @return {Integer} value The modified value
  */
 function myFunction(number) {
     //do something
@@ -78,16 +79,16 @@ function myFunction(number) {
 }
 ```
 
-### Use // for single line comments.
+### Use `//` for single line comments.
 Place single line comments on a newline above the subject of the comment. Put an empty line before the comment.
 
 ```javascript
 // bad
-var active = true;  // is current tab
+let active = true;  // is current tab
 
-// good
+// better
 // is current tab
-var active = true;
+let active = true;
 ```
 
 This is in contradiction to Douglas' recommendation, but the best practises changed here. Also Sonar will raise an error
@@ -96,25 +97,25 @@ if you make same line comments.
 
 ## Variables / (File)Naming
 
-### Always use var to declare variables.
+### Always use `let` to declare variables.
 Not doing so will result in global variable and this is something we clearly dont want.
 
 ```javascript
 // bad
 variable = "Global variable"
 
-// good
-var variable = 'Variable in context';
+// better
+let variable = 'Variable in context';
 ```
 
 ### Assign variables at the top of their scope.
-This helps avoid issues with variable declaration and assignment hoisting related issues.
+This helps avoid issues with variable declaration and assignment hoisting related issues. Also it could prevent the [Temporal Dead Zone](https://www.christian-sharaf.de/blog/2020/temporal-dead-zone/).
 
 ```javascript
 // bad
 function() {
     // doing stuff
-    var value = getValue();
+    let value = getValue();
 
     if (value ===  'undefined' ) {
         return false;
@@ -123,9 +124,9 @@ function() {
     return value;
 }
 
-// good
+// better
 function() {
-    var value = getValue();
+    let value = getValue();
     // doing stuff
     if (value ===  'undefined' ) {
         return false;
@@ -147,7 +148,7 @@ function chgBtnFnt() {}
 
 
 
-// good
+// better
 function query() {
   // ..stuff..
 }
@@ -158,13 +159,13 @@ function changeButtonFont() {}
 
 ```javascript
 // bad
-var OBJEcttsssss = {};
-var this_is_my_object = {};
-var o = {};
+let OBJEcttsssss = {};
+let this_is_my_object = {};
+let o = {};
 function c() {}
 
-// good
-var thisIsMyObject = {};
+// better
+let thisIsMyObject = {};
 function thisIsMyFunction() {}
 ```
 
@@ -172,52 +173,52 @@ function thisIsMyFunction() {}
 
 ```javascript
 // bad
-var bad = new user({
+let bad = new user({
   name:  'nope'
 });
 
-// good
-var good = new User({
+// better
+let good = new User({
   name:  'yup'
 });
 ```
 
-### Use . (dot) separator combined with lowercase when naming files and namespaces.
+### Use `.` (dot) separator combined with lowercase when naming files and namespaces.
 
 ```javascript
 // bad
 // file name moduleUser.js
-var moduleUser = function () {
-    var method1 = function() {
+let moduleUser = function () {
+    let method1 = function() {
         // ...stuff...
     }
     // ...stuff...
 };
 
 
-// good
+// better
 // file name modules.user.js
 modules = modules || {};
 modules.User = function () {
-   var method1 = function() {
+   let method1 = function() {
     // ...stuff...
    }
    // ...stuff...
 };
 ```
 
-### Use $ notation for jQuery objects
+### Use `$` notation for jQuery objects
 ```javascript
 //bad
-var myObject = $('myDOMElem');
+let myObject = $('myDOMElem');
 
 //good
-var $myObject = $('myDOMElem');
+let $myObject = $('myDOMElem');
 ```
 
 ## Comparators
 
-Use === and !== over == and !=.
+Use `===` and `!==` over `==` and `!=`.
 
 Conditional statements such as the if statement evaluate their expression using coercion with the ToBoolean abstract
 method and always follow these simple rules:
@@ -240,7 +241,7 @@ if (array.length > 0) {
 }
 
 
-// good
+// better
 if (value) {
     // ...stuff...
 }

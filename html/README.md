@@ -31,11 +31,11 @@ ruleset as follows:
     </body>
 </html>
 
-// Good HTML example
+// Better HTML example
 <!doctype html>
 <html lang="en">
     <head>
-      <meta charset="utf-8">
+        <meta charset="utf-8">
     </head>
     <body>
     </body>

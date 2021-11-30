@@ -35,7 +35,7 @@ The general standard is [CSS](https://www.w3.org/Style/CSS/) from W3C.
     // ...
 }
 
-// Good CSS examples
+// Better CSS examples
 .MyAwesomeComponent,
 .my-awesome-class {
   border: 2px solid #fff;
@@ -86,7 +86,7 @@ For more information, read this article by [Steve Souders](https://www.stevesoud
 
 ## Do not use @extend
 Never. Just don't.
-If you want to read more about it, you can find some information in this nice article from [CSS Wizardry](http://csswizardry.com/2016/02/mixins-better-for-performance/). It handles Sass, but the result is the same.
+If you want to read more about it, you can find some information in this nice article from [CSS Wizardry](http://csswizardry.com/2016/02/mixins-better-for-performance/).
 
 ## File naming
 Typically you should create CSS modules and a namespace for your library. The file naming should follow this structure.
